@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "serve": "live-server dist",
-    "compile-sass": "sass dist/scss/styles.scss css/styles.css -w --no-source-map -w"
+    "compile-sass": "sass dist/scss/styles.scss dist/css/styles.css -w --no-source-map -w"
   },
   "keywords": [],
   "author": "",
