@@ -1,1 +1,35 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: -65px;
 
+  .footer-nav {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .footer-icons {
+    display: flex;
+    .fb {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}

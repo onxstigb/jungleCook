@@ -72,6 +72,35 @@ p {
     display: flex; /* Show navigation when menu is active */
   }
 }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: -65px;
+}
+footer .footer-nav {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footer-nav a {
+  text-decoration: none;
+  color: black;
+}
+footer .footer-nav a:hover {
+  color: white;
+}
+footer .footer-icons {
+  display: flex;
+}
+footer .footer-icons .fb {
+  margin-right: 20px;
+}
+
 #home {
   display: flex;
   align-items: center;
