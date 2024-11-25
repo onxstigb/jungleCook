@@ -22,52 +22,225 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="nav-container">
-      <div class="logo">The JungleCook</div>
-      <nav class="nav">
-        <ul class="nav--ul__one">
-          <li class="nav-link"><a id="home" href="#home">Home</a></li>
-          <li class="nav-link"><a id="browse" href="#">Browse</a></li>
-          <li class="nav-link">
-            <a id="create" href="#">Create Recipe</a>
-          </li>
-        </ul>
-        <ul class="nav--ul__two">
-          <li class="nav-link"><a id="login" href="#login">Login</a></li>
-          <li class="nav-link">
-            <a id="recipes" href="#">Your Recipes</a>
-          </li>
-        </ul>
-      </nav>
-      <span class="hamburger-menu material-icons-outlined">menu</span>
-    </header>
+    <nav class="navbar">
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="168"
+          height="55"
+          viewBox="0 0 169 55"
+        >
+          <g id="Group_1" data-name="Group 1" transform="translate(-50 -38)">
+            <circle
+              id="Ellipse_1"
+              data-name="Ellipse 1"
+              cx="16"
+              cy="16"
+              r="16"
+              transform="translate(52 38)"
+              fill="#c7eae4"
+            />
+            <circle
+              id="Ellipse_2"
+              data-name="Ellipse 2"
+              cx="15"
+              cy="15"
+              r="15"
+              transform="translate(76 54)"
+              fill="#ffd972"
+            />
+            <circle
+              id="Ellipse_3"
+              data-name="Ellipse 3"
+              cx="27"
+              cy="27"
+              r="27"
+              transform="translate(103 39)"
+              fill="#a7e8bd"
+            />
+            <circle
+              id="Ellipse_4"
+              data-name="Ellipse 4"
+              cx="12"
+              cy="12"
+              r="12"
+              transform="translate(185 57)"
+              fill="#efa7a7"
+            />
+            <text
+              id="The_Jungle_Cook"
+              data-name="The Jungle Cook"
+              transform="translate(50 74)"
+              font-size="25"
+              font-family="Caveat-Regular, Caveat"
+              letter-spacing="0.1em"
+            >
+              <tspan x="0" y="0">The Jungle Cook</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Create Recipe</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span>&#9776;</span>
+      </div>
+    </nav>
 
     <!-- Main Content -->
-    <div id="app"></div>
+    <div id="app">
+      <div class="account">
+        <!-- Login Form -->
+        <div class="login">
+          <h1>Login Here!</h1>
+          <form action="#" method="POST">
+            <label for="login-email">Email Address:</label>
+            <input
+              type="email"
+              name="email"
+              id="login-email"
+              placeholder="Email Address"
+              required
+            />
+
+            <label for="login-password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="login-password"
+              placeholder="Password"
+              required
+            />
+
+            <button type="submit" id="submit">LOGIN</button>
+          </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="signup">
+          <p>Don't have an account?</p>
+          <h1>Sign up!</h1>
+          <form action="#" method="POST">
+            <label for="fname">First Name:</label>
+            <input
+              type="text"
+              name="fname"
+              id="fName"
+              placeholder="First Name"
+              required
+            />
+
+            <label for="lname">Last Name:</label>
+            <input
+              type="text"
+              name="lName"
+              id="lname"
+              placeholder="Last Name"
+              required
+            />
+
+            <label for="signup-email">Email Address:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+
+            <label for="signup-password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+
+            <button type="submit" class="signup-btn">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer Content -->
     <footer>
       <span>Copyright © 2019 The Jungle Cook</span>
-      <div class="links">
-        <a href="#login">Login</a>
-        <a href="#recipescategory">Recipes by Category</a>
-        <a href="#privacy">Privacy and Copyright</a>
-        <a href="#create">Create Recipe</a>
-        <a href="#yours">Your Recipes</a>
-      </div>
-      <div class="icons">
+      <nav class="footer-nav">
+        <a href="#">Recipes</a>
+        <a href="#">Category</a>
+        <a href="#">Privacy and Copyright</a>
+        <a href="#">Your Recipes</a>
+      </nav>
+      <div class="footer-icons">
         <div class="fb">
-          <i
-            class="fa-brands fa-square-facebook fa-lg"
-            style="color: #393939"
-          ></i>
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m75 512h167v-182h-60v-60h60v-75c0-41.355469 33.644531-75 75-75h75v60h-60c-16.542969 0-30 13.457031-30 30v60h87.292969l-10 60h-77.292969v182h135c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-105v-122h72.707031l20-120h-92.707031v-30h90v-120h-105c-57.898438 0-105 47.101562-105 105v45h-60v120h60v122h-137c-24.8125 0-45-20.1875-45-45zm0 0"
+            />
+          </svg>
         </div>
         <div class="insta">
-          <i class="fa-brands fa-instagram fa-lg" style="color: #393939"></i>
+          <svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <circle cx="393.6" cy="118.4" r="17.056" />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="app/app.js"></script>
+    <script src="../src/index.js"></script>
+    <script src="../src/model/model.js"></script>
   </body>
 </html>

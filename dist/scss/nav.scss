@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  // background-color: #333;
+  position: absolute;
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 900px;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Hamburger Icon Styles (hidden by default) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  span {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Hide the navigation links */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger menu */
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show navigation when menu is active */
+  }
+}

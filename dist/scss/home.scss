@@ -1,0 +1,56 @@
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 100px);
+}
+
+.hero {
+  height: 800px;
+  width: 100%;
+  // background-color: antiquewhite;
+  background-image: linear-gradient(
+      rgba(242, 92, 84, 0.6),
+      rgba(242, 92, 84, 0.6)
+    ),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .circle-container {
+    width: 357px;
+    height: 357px;
+    position: relative;
+
+    .yellow-circle {
+      width: 357px;
+      height: 357px;
+      background-color: $site-yellow;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: -5px 10px 10px 1px rgba(136, 136, 136, 0.2);
+    }
+    .small-circle {
+      width: 168px;
+      height: 168px;
+      background-color: $site-pink;
+      position: absolute;
+      border-radius: 50%;
+      right: -50px;
+      top: -50px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      box-shadow: -5px 10px 10px 1px rgba(136, 136, 136, 0.2);
+    }
+  }
+}

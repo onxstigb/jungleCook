@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+}
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 900px;
+}
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+.navbar .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hamburger Icon Styles (hidden by default) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger span {
+  font-size: 30px;
+  color: white;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Hide the navigation links */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    text-align: center;
+  }
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block; /* Show the hamburger menu */
+  }
+  .navbar.active .nav-links {
+    display: flex; /* Show navigation when menu is active */
+  }
+}
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 100px);
+}
+
+.hero {
+  height: 800px;
+  width: 100%;
+  background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .circle-container {
+  width: 357px;
+  height: 357px;
+  position: relative;
+}
+.hero .circle-container .yellow-circle {
+  width: 357px;
+  height: 357px;
+  background-color: #ffd972;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: -5px 10px 10px 1px rgba(136, 136, 136, 0.2);
+}
+.hero .circle-container .small-circle {
+  width: 168px;
+  height: 168px;
+  background-color: #fcbcb8;
+  position: absolute;
+  border-radius: 50%;
+  right: -50px;
+  top: -50px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: -5px 10px 10px 1px rgba(136, 136, 136, 0.2);
+}
+
+.account {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color: #ffd972;
+}
+.account input {
+  margin-top: 44px;
+  font-size: 16px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1.5px solid black;
+  background-color: #ffd972;
+}
+.account input:focus {
+  outline: none;
+}
+.account input::placeholder {
+  color: black;
+}
+.account button {
+  margin-top: 44px;
+  width: 170px;
+  height: 40px;
+  align-self: center;
+  color: white;
+  background-color: #ffd972;
+  border-radius: 16px;
+  border-color: #ffd972;
+  box-shadow: 2px 2px 2px #d6b65f;
+  color: #000000;
+  cursor: pointer;
+}
+.account h1 {
+  font-size: 26px;
+  font-weight: normal;
+}
+.account .login,
+.account .signup {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+.account .login p,
+.account .signup p {
+  margin-bottom: 1px;
+}
+
+@media screen and (max-width: 778px) and (min-width: 391px) {
+  .account {
+    flex-direction: column;
+  }
+  .account h1 {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  .account input,
+  .account button,
+  .account p {
+    font-size: 11px;
+  }
+}
