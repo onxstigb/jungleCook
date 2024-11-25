@@ -1,0 +1,83 @@
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.form {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+.form p {
+  margin-bottom: 5px;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.ingreds {
+  position: relative;
+}
+.instructs {
+  position: relative;
+}
+
+.addBtn {
+  background-color: pink;
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 25px;
+  background-color: pink;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.recipe {
+  width: 500px;
+  min-height: 500px;
+  background-color: antiquewhite;
+  display: flex;
+}
+
+.recipeImageHolder {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.recipeImageHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipeDescription {
+  width: calc(100% - 200px);
+  padding: 20px;
+  background-color: azure;
+}

@@ -93,77 +93,25 @@
 
     <!-- Main Content -->
     <div id="app">
-      <div class="account">
-        <!-- Login Form -->
-        <div class="login">
-          <h1>Login Here!</h1>
-          <form action="#" method="POST">
-            <label for="login-email">Email Address:</label>
-            <input
-              type="email"
-              name="email"
-              id="login-email"
-              placeholder="Email Address"
-              required
-            />
+      <div class="form">
+        <input type="text" id="imageURL" placeholder="image url" />
+        <input type="text" id="recipeName" placeholder="recipe name" />
 
-            <label for="login-password">Password:</label>
-            <input
-              type="password"
-              name="password"
-              id="login-password"
-              placeholder="Password"
-              required
-            />
-
-            <button type="submit" id="submit">LOGIN</button>
-          </form>
+        <div class="ingreds">
+          <p>Enter Ingredients:</p>
+          <input type="text" id="ingred1" placeholder="ingredient 1" />
+          <input type="text" id="ingred2" placeholder="ingredient 2" />
+          <input type="text" id="ingred3" placeholder="ingredient 3" />
+          <span class="addBtn" id="ingredBtn">+</span>
         </div>
-
-        <!-- Signup Form -->
-        <div class="signup">
-          <p>Don't have an account?</p>
-          <h1>Sign up!</h1>
-          <form action="#" method="POST">
-            <label for="fname">First Name:</label>
-            <input
-              type="text"
-              name="fname"
-              id="fName"
-              placeholder="First Name"
-              required
-            />
-
-            <label for="lname">Last Name:</label>
-            <input
-              type="text"
-              name="lName"
-              id="lname"
-              placeholder="Last Name"
-              required
-            />
-
-            <label for="signup-email">Email Address:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-              required
-            />
-
-            <label for="signup-password">Password:</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-
-            <button type="submit" class="signup-btn">SIGN UP</button>
-          </form>
+        <div class="instructs">
+          <p>Enter Instructions:</p>
+          <input type="text" id="instruct1" placeholder="instruction 1" />
+          <input type="text" id="instruct2" placeholder="instruction 2" />
+          <input type="text" id="instruct3" placeholder="instruction 3" />
+          <span class="addBtn" id="instructBtn">+</span>
         </div>
+        <span class="submitBtn">Create Recipe</span>
       </div>
     </div>
 
@@ -248,6 +196,6 @@
     <!-- Scripts -->
     <script src="app/app.js"></script>
     <script src="../src/index.js"></script>
-    <script src="../src/model/model.js"></script>
+    <script src="../src/model.js"></script>
   </body>
 </html>

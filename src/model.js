@@ -9,7 +9,7 @@ export function changePage(pageName) {
 
   console.log(`Loading ${pageName}.html`);
 
-  $.get(`pages/${pageName}.html`, (data) => {
+  $.get(`/dist/pages/${pageName}.html`, (data) => {
     console.log(`Successfully loaded: ${pageName}.html`);
     $("#app").html(data);
   }).fail((error) => {
@@ -23,7 +23,7 @@ export function changePage(pageName) {
       showCancelButton: false,
     }).then(() => {
       console.log("Loading fallback page: home.html");
-      $.get("../../dist/pages/home.html", (data) => {
+      $.get("/dist/pages/home.html", (data) => {
         console.log("Successfully loaded fallback home.html");
         $("#app").html(data);
       }).fail((fallbackError) => {
@@ -35,5 +35,13 @@ export function changePage(pageName) {
 }
 
 export function signUserUp(fn, ln, email, password) {
-  console.log("model.js " + fn, ln, email, password);
+  console.log("Registering user:", fn, ln, email, password);
+
+  $.post("/api/register", { fn, ln, email, password })
+    .done((response) => {
+      console.log("User successfully registered:", response);
+    })
+    .fail((error) => {
+      console.error("Error registering user:", error);
+    });
 }

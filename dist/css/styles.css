@@ -78,8 +78,11 @@ footer {
   justify-content: space-between;
   text-align: center;
   padding: 10px;
-  position: relative;
-  top: -65px;
+  position: fixed;
+  bottom: -11px;
+  width: 100%;
+  margin-top: 30px;
+  z-index: 10;
 }
 footer .footer-nav {
   gap: 15px;
@@ -90,9 +93,10 @@ footer .footer-nav {
 footer .footer-nav a {
   text-decoration: none;
   color: black;
+  font-size: 16px;
 }
 footer .footer-nav a:hover {
-  color: white;
+  color: #ccc;
 }
 footer .footer-icons {
   display: flex;
@@ -101,7 +105,21 @@ footer .footer-icons .fb {
   margin-right: 20px;
 }
 
-#home {
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  .footer-nav {
+    gap: 10px;
+    justify-content: center;
+  }
+  .footer-icons {
+    margin-top: 10px;
+  }
+}
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +175,17 @@ footer .footer-icons .fb {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  flex-wrap: wrap;
   background-color: #ffd972;
+}
+.account .login,
+.account .signup {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+.account .login p,
+.account .signup p {
+  margin-bottom: 1px;
 }
 .account input {
   margin-top: 44px;
@@ -166,7 +193,7 @@ footer .footer-icons .fb {
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 1.5px solid black;
+  border-bottom: 3px solid black;
   background-color: #ffd972;
 }
 .account input:focus {
@@ -192,16 +219,6 @@ footer .footer-icons .fb {
   font-size: 26px;
   font-weight: normal;
 }
-.account .login,
-.account .signup {
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-}
-.account .login p,
-.account .signup p {
-  margin-bottom: 1px;
-}
 
 @media screen and (max-width: 778px) and (min-width: 391px) {
   .account {
@@ -216,4 +233,188 @@ footer .footer-icons .fb {
   .account p {
     font-size: 11px;
   }
+}
+.browse {
+  margin: 0 auto;
+  padding: 20px;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+.browse .browse-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(167, 232, 189, 0.8), rgba(167, 232, 189, 0.8)), url(../images/typing.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.browse h1 {
+  text-align: left;
+  color: black;
+  margin: 50px;
+  padding-top: 20px;
+  padding-left: 165px;
+}
+.browse .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 524px);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  z-index: 2;
+  min-height: 400px;
+}
+.browse .recipe-card {
+  width: 524px;
+  height: 263px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.browse .recipe-card:hover {
+  transform: translateY(-5px);
+}
+.browse .recipe-card .recipe-image {
+  width: 300px;
+  height: 100%;
+}
+.browse .recipe-card .recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.browse .recipe-card .recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 15px;
+  width: calc(100% - 300px);
+}
+.browse .recipe-card .recipe-content .recipe-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 10px;
+}
+.browse .recipe-card .recipe-content .recipe-details {
+  font-size: 14px;
+  color: black;
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .browse .recipe-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .browse .recipe-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .browse .recipe-image {
+    width: 100%;
+    height: 150px;
+  }
+  .browse .recipe-content {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.form {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+.form p {
+  margin-bottom: 5px;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.ingreds {
+  position: relative;
+}
+
+.instructs {
+  position: relative;
+}
+
+.addBtn {
+  background-color: pink;
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 25px;
+  background-color: pink;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.recipe {
+  width: 500px;
+  min-height: 500px;
+  background-color: antiquewhite;
+  display: flex;
+}
+
+.recipeImageHolder {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.recipeImageHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipeDescription {
+  width: calc(100% - 200px);
+  padding: 20px;
+  background-color: azure;
 }
