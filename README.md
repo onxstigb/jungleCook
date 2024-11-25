@@ -18,3 +18,5 @@ File structure is the same
 Checked with other sources to no avail
 
 ### Web4 Link: https://in-info-web4.luddy.indianapolis.iu.edu/~obrookin/AdvWeb/jungleCook/dist/home.html
+
+### Github Link: https://onxstigb.github.io/jungleCook/dist/home.html
