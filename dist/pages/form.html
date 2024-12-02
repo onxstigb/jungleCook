@@ -1,7 +1,8 @@
 <div class="form">
-  <input type="text" id="imageURL" placeholder="image url" />
+  <input type="text" id="imageURL" placeholder="image URL" />
   <input type="text" id="recipeName" placeholder="recipe name" />
 
+  <!-- Ingredients Section -->
   <div class="ingreds">
     <p>Enter Ingredients:</p>
     <input type="text" id="ingred1" placeholder="ingredient 1" />
@@ -9,6 +10,8 @@
     <input type="text" id="ingred3" placeholder="ingredient 3" />
     <span class="addBtn" id="ingredBtn">+</span>
   </div>
+
+  <!-- Instructions Section -->
   <div class="instructs">
     <p>Enter Instructions:</p>
     <input type="text" id="instruct1" placeholder="instruction 1" />
@@ -16,5 +19,10 @@
     <input type="text" id="instruct3" placeholder="instruction 3" />
     <span class="addBtn" id="instructBtn">+</span>
   </div>
+
+  <!-- Submit Button -->
   <span class="submitBtn">Create Recipe</span>
 </div>
+
+<!-- Container for displaying all recipes -->
+<div id="showAllRecipes"></div>
