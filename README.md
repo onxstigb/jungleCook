@@ -24,3 +24,7 @@ Checked with other sources to no avail
 # Homework 8 Extension
 
 FINALLY got js files to work. Life is better.
+
+### Web4 Link: https://onxstigb.github.io/jungleCook/dist/index.html
+
+### Github Link: https://onxstigb.github.io/jungleCook/dist/index.html
