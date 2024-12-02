@@ -1,12 +1,17 @@
 import * as $ from "jquery";
-import { changePage } from "../src/model.js";
-import { signUserUp } from "../src/model.js";
+import { changePage } from "./model.js";
+import { signUserUp } from "./model.js";
+import Swal from "sweetalert2"; // Import SweetAlert2 for alerts
 
 function initListeners() {
   $("nav a").on("click", function (e) {
     e.preventDefault();
     let pageID = $(this).attr("id");
     console.log("Navigating to page:", pageID);
+    if (!pageID) {
+      console.error("Page ID is undefined or invalid");
+      return;
+    }
     changePage(pageID);
   });
 
@@ -17,7 +22,11 @@ function initListeners() {
     const password = $("#password").val();
 
     if (!firstName || !lastName || !email || !password) {
-      alert("Please fill in all fields.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill in all fields.",
+      });
       return;
     }
 
@@ -30,6 +39,10 @@ function initListeners() {
     });
   });
 }
+
+$(document).ready(function () {
+  initListeners();
+});
 
 document.getElementById("hamburger").addEventListener("click", function () {
   document.querySelector(".navbar").classList.toggle("active");
@@ -71,7 +84,11 @@ function addRecipeListeners() {
     });
 
     userRecipes.push(recipe);
-    alert("Recipe Submitted");
+    Swal.fire({
+      icon: "success",
+      title: "Recipe Submitted",
+      text: "Your recipe has been submitted successfully.",
+    });
     $(".form input").val("");
     console.log(userRecipes);
 
@@ -111,7 +128,7 @@ function changeRoute() {
 
   if (pageID !== "") {
     $.get(`pages/${pageID}.html`, function (data) {
-      console.log("data " + data);
+      console.log("Loaded page:", pageID);
       $("#app").html(data);
       addRecipeListeners();
       if (pageID == "recipeForm") {
@@ -122,11 +139,23 @@ function changeRoute() {
       } else {
         removeRecipeListeners();
       }
+    }).fail(function () {
+      Swal.fire({
+        icon: "error",
+        title: "Page Not Found",
+        text: `The page ${pageID} could not be found.`,
+      });
     });
   } else {
-    $.get(`pages/home/home.html`, function (data) {
-      console.log("data " + data);
+    $.get(`pages/home.html`, function (data) {
+      console.log("Loaded home page");
       $("#app").html(data);
+    }).fail(function () {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Home page could not be loaded.",
+      });
     });
   }
 }
